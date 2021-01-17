@@ -421,6 +421,7 @@ carousel_position_notified_cb (PhoshLockscreen *self,
 
     return;
   }
+  g_signal_emit(self, signals[LOCKSCREEN_UNLOCK], 0);
 
   if (priv->idle_timer) {
     g_source_remove (priv->idle_timer);
